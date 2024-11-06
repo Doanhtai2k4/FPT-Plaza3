@@ -1,0 +1,173 @@
+.titlexemchitiet {
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+    width: 100%;
+     max-width: 100%;
+     text-align: center;
+     justify-content: center;
+     background-color: #767778;
+}
+.titlexemchitiet h2.active {
+    height: 30px;
+    color: #f5f1ed; /* Màu chữ */
+    margin-top: 30px;
+    animation: pulse 3s infinite; /* Chạy animation "pulse" liên tục */
+    text-shadow: 0 0 5px rgba(27, 27, 26, 0.8), /* Ánh sáng xung quanh chữ */
+                 0 0 10px rgba(20, 19, 19, 0.6),
+                 0 0 15px rgba(77, 77, 77, 0.4);
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Khởi tạo kích thước bình thường */
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), /* Bắt đầu với ánh sáng */
+                     0 0 10px rgba(135, 135, 135, 0.6),
+                     0 0 15px rgba(114, 114, 114, 0.4);
+    }
+    50% {
+        transform: scale(1.1); /* Phóng to 110% */
+        text-shadow: 0 0 10px rgb(181, 176, 176), /* Ánh sáng mạnh hơn khi phóng to */
+                     0 0 20px rgba(255, 255, 255, 0.8),
+                     0 0 30px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        transform: scale(1); /* Quay về kích thước bình thường */
+        text-shadow: 0 0 5px rgba(158, 154, 154, 0.8), /* Trở lại ánh sáng ban đầu */
+                     0 0 10px rgba(159, 156, 156, 0.6),
+                     0 0 15px rgba(159, 156, 156, 0.4);
+    }
+}
+.titlexemchitiet img {
+    margin: 0 auto;
+    align-items: center;
+    width: 200px;
+    height: 130px;
+}
+.containerCanhochitiet {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    /* margin-bottom: -30px; */
+}
+
+.background-imgaecanhofpt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Images/hinhnenchitietcanho.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.overlayCanhochitiet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(38, 40, 41, 0.606);
+    z-index: 1;
+}
+
+.itemCanho {
+    display: flex;
+    flex-direction: column; /* Sắp xếp các phần tử con theo hàng dọc */
+    align-items: center;    /* Căn giữa các phần tử con theo chiều ngang */
+    text-align: center;     /* Căn giữa nội dung văn bản */
+    width: 27%;             /* Chiếm 27% chiều rộng của container */
+    height: 80%;            /* Chiếm 80% chiều cao của container */
+    z-index: 2;
+    margin-top: 50px;
+    margin-left: 80px;
+    background-color: rgb(85, 89, 94);
+    border: 2px solid #4c4b4b;
+    transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+/* Hiệu ứng phóng to và thu nhỏ khi hover */
+.itemCanho:hover {
+    animation: pulse 2.5s infinite; /* Chạy animation "pulse" liên tục trong 0.6 giây */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Kích thước bình thường */
+    }
+    50% {
+        transform: scale(1.05); /* Phóng to 105% */
+    }
+    100% {
+        transform: scale(1); /* Quay về kích thước bình thường */
+    }
+}
+
+.image-Canhochitiet {
+    width: 100%;            /* Chiếm 100% chiều rộng của itemCanho */
+    height: 70%;            /* Chiếm 60% chiều cao của itemCanho */
+    position: relative;     /* Để đảm bảo img có thể được định vị chính xác */
+}
+
+.image-Canhochitiet img {
+    width: 100%;            /* Chiếm 100% chiều rộng của image-Canhochitiet */
+    height: 100%;           /* Chiếm 100% chiều cao của image-Canhochitiet */
+    object-fit: cover;      /* Đảm bảo ảnh không bị méo */
+}
+
+.info-Canhochitiet {
+    width: 100%;            /* Chiếm 100% chiều rộng của itemCanho */
+    height: 30%;            /* Chiếm 40% chiều cao của itemCanho */
+    display: flex;          /* Để căn giữa các phần tử con bên trong */
+    flex-direction: column; /* Để sắp xếp các phần tử con theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+}
+
+.info-Canhochitiet h2 {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.image-Canhochitiet h2 span{
+    color: #faefda;
+}
+
+.button-chitiet{
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 10px;
+    background-color: rgb(85, 89, 94);
+    
+    border: none; /* Không có viền */
+    border: 3px solid #FFA000;
+    border-radius: 5px ; /* Bo góc của nút */
+    font-size: 18px; /* Kích thước font chữ */
+    font-weight: bold; /* Chữ in đậm */
+   
+    display: inline-flex; /* Sử dụng inline-flex để căn giữa nội dung */
+    justify-content: center; /* Căn giữa nội dung ngang */
+    align-items: center; /* Căn giữa nội dung dọc */
+    cursor: pointer; /* Thay đổi con trỏ chuột khi hover vào nút */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+}
+
+.button-chitiet a{
+    color:#FFA000; 
+    text-decoration: none; /* Không có gạch chân */
+}
+.button-chitiet:hover {
+    background-color: #014229; /* Thay đổi màu nền khi hover vào nút */
+    border: 3px solid #f0eade;
+   
+}
+.button-chitiet a:hover{
+    color: #fff;
+}

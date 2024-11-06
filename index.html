@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FPT Plaza3</title>
+  <script type="text/javascript" src="https://cdn.fchat.vn/assets/embed/webchat.js?id=672a492762c6aa02ee7e7b02" async="async"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <link rel="stylesheet" href="head.css">
+  <link rel="stylesheet" href="CSS/page1.css">
+  <link rel="stylesheet" href="panorama.css">
+  <script src="script.js" defer></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./CSS/itemChitietcanho.css">
+  </script>
+  
+</head>
+
+<body>
+  <div id="header-container"></div>
+  <script>
+    // Function to load the header
+    async function loadHeader() {
+      const headerContainer = document.getElementById('header-container');
+      try {
+        const response = await fetch('./HTML/header.html');
+        if (response.ok) {
+          const headerHTML = await response.text();
+          headerContainer.innerHTML = headerHTML;
+        } else {
+          console.error('Failed to load header:', response.status);
+        }
+      } catch (error) {
+        console.error('Error loading header:', error);
+      }
+    }
+
+    loadHeader(); // Call the function to load the header
+  </script>
+
+  <section class="project-section">
+    <div class="project-image">
+      <img src="Images/anhbia.jpg" alt="FPT Plaza">
+    </div>
+    <!-- <div class="video-modau">
+            <video controls>
+                <source src="Videos/videofpt.mp4" type="video/mp4">               
+            </video>
+        </div> -->
+
+    <div id="registration-modal" class="registration-modal">
+      <div class="registration-modal-content">
+        <span class="close-button">&times;</span>
+        <h2><span class="green-text">Đăng ký tham quan</span> FPT Plaza</h2>
+        <img id="logoformfpt" src="Images/logofptplaza3.png" alt="">
+        <form class="registration-form">
+          <input type="text" placeholder="Họ và tên" />
+          <input type="email" placeholder="Nhập Email" />
+          <input type="tel" placeholder="Nhập Số điện thoại" />
+          <div class="time-slots">
+            <label>
+              <input type="radio" name="time-slot" value="09:00" />
+              &nbsp09:00
+            </label>
+            <label>
+              <input type="radio" name="time-slot" value="11:00" />
+              &nbsp11:00
+            </label>
+            <label>
+              <input type="radio" name="time-slot" value="14:00" />
+              &nbsp14:00
+            </label>
+            <label>
+              <input type="radio" name="time-slot" value="16:00" />
+              &nbsp16:00
+            </label>
+            <label>
+              <input type="radio" name="time-slot" value="video" />
+              Tham quan qua Video trực tiếp
+            </label>
+          </div>
+          <button type="submit" class="submit-button">GỬI YÊU CẦU CHO BQT DỰ ÁN</button>
+        </form>
+      </div>
+    </div>
+    </div>
+  </section>
+  <div class="tour">
+    <div class="containerImage360">
+      <div class="tour_head">
+        <P> <span>FPT Plaza 3</span> thừa hưởng đầy đủ hệ thống tiện ích với công viên và quảng trường trung tâm rộng
+          lên đến 3 hecta, tạo ra một môi trường sống trong lành, xanh mát, giúp cư dân tận hưởng không gian sống thư
+          thái.
+          Bên cạnh hệ thống giáo dục liên cấp chất lượng cao: FPT Schools, Đại học FPT, cùng các trường quốc tế lân cận,
+          giúp cư dân <span>FPT Plaza 3</span> hoàn toàn yên tâm cho tương lai con trẻ.
+          Ngoài ra, FPT Plaza 3 còn cung cấp nhiều tiện ích nội khu như: hồ bơi trong nhà, sảnh sinh hoạt chung, tầng
+          hầm đỗ xe rộng rãi, khuôn viên cây xanh,… Tất cả những tiện ích này đều được thiết kế nhằm đáp ứng tối đa nhu
+          cầu sinh hoạt của cư dân.</P>
+        <p>Ngoài ra, <span>FPT Plaza 3</span> còn cung cấp nhiều tiện ích nội khu như: hồ bơi trong nhà, sảnh sinh hoạt
+          chung, tầng hầm đỗ xe rộng rãi, khuôn viên cây xanh,… Tất cả những tiện ích này đều được thiết kế nhằm đáp ứng
+          tối đa nhu cầu sinh hoạt của cư dân.</p>
+        <h2>HÌNH ẢNH 360 THỰC TẾ CĂN HỘ FPT PLAZA 3 ĐÀ NẴNG</h2>
+      </div>
+      <div class="image-container">
+      </div>
+
+    </div>
+  </div>
+  <div class="containervideofpt">
+    <div class="background-videofpt"></div>
+    <div class="overlayvideofpt"></div>
+    <div class="video-modau">
+            <video class="video" autoplay muted controls>
+                <source src="Videos/VideoFPTPLAZA.mp4" type="video/mp4">               
+            </video>
+        </div>
+    <div class="contentvideo">
+      <h2>Gốc nhìn về đêm tại FPT PLAZA</h2>
+      <p><i class='bx bxs-plane-take-off'></i> Ngắm nhìn khu đô thi <span>FPT Đà Nẵng</span> lung linh về đêm <i class='bx bxs-hot' ></i><i class='bx bxs-hot' ></i><i class='bx bxs-hot' ></i></p>
+      <p><i class='bx bxs-plane-take-off'></i> <span>FPT PLAZA 3</span> có đáng sống, có đáng đầu tư ??? <i class='bx bxs-hand-right'></i> khi mà hàng trăm căn hộ đợt 1 được bán sạch không còn căn nào chỉ trong 1 ngày.</p>
+      <p><i class='bx bx-buildings'></i> TẬN HƯỞNG "VIEW ĐA CHIỀU" SỐNG ĐỘNG TẠI <span>FPT PLAZA 3</span>.</p>
+      <p><i class='bx bx-camera' ></i> <strong>&nbsp;View sông và biển:</strong> &nbsp;   Đón làn gió mát từ biển Tân Trà và ngắm nhìn vẻ đẹp thơ mộng của sông Cổ Cò.</p>
+      <p><i class='bx bx-camera' ></i> <strong>&nbsp;View quảng trường trung tâm:</strong>  &nbsp; Hoà mình vào không gian sôi động của quảng trường ngay dưới chân chung cư, nơi diễn ra những sự kiện và hoạt động thú vị.</p>
+      <p><i class='bx bx-camera' ></i> <strong>&nbsp;View sân golf:</strong> &nbsp; Thư giãn với tầm nhìn hướng vào sân golf đẳng cấp, mang đến sự tươi mới và tràn đầy năng lượng mỗi ngày.</p>
+    </div>
+  </div>
+  <div class="container1">
+    <div class="background-image"></div>
+    <div class="overlay"></div>
+    <div class="info-container">
+      <h1>CĂN HỘ CHUNG CƯ <span>FPT PLAZA - FPT PLAZA 3</span> ĐÀ NẴNG</h1>
+      <p>Tòa căn hộ <span>FPT Plaza 1, FPT Plaza 2</span> đã hoàn thiện và bàn giao hết cho các cư dân - Đang mở bán Tòa
+        căn hộ <span>FPT Plaza 3</span> Đà Nẵng với nhiều ưu đãi hấp dẫn...</p>
+    </div>
+    <div class="content">
+      <div class="image-container">
+        <img src="./Images/anhcanho.jpg" alt="FPT Plaza 3 Đà Nẵng">
+      </div>
+      <div class="info-container2">
+        <h2 class="title">TỔNG QUAN <span>FPT PLAZA 3</span> ĐÀ NẴNG</h2>
+        <ul>
+          <li><span>Tên dự án:</span> Tòa Căn Hộ Chung Cư FPT Plaza 3</li>
+          <li><span>Chủ đầu tư:</span> Công ty Cổ phần đô thị FPT Đà Nẵng</li>
+          <li><span>Địa chỉ:</span> Đường Hoàng Minh Thảng, Khu đô thị FPT City, Phường Hòa Hải, Quận Ngũ Hành Sơn,
+            Thành phố Đà Nẵng</li>
+          <li><span>Diện tích:</span> 6.512 m2 - Mật độ xây dựng: 49,94% - Tổng sản phẩm: 837 Căn</li>
+          <li><span>FPT Plaza 3</span> chia làm 2 tòa tách biệt: Tòa The Empire kí hiệu E - Tòa The Wealthe kí hiệu W
+          </li>
+          <li><span>Mối tòa: 18 tầng</span> - 36 căn/tầng - Tháng mấy: 14 căn 2 cum</li>
+          <li><span>Tầng 1:</span> 14 căn shophouse - Tầng 2 SHCD: Căn hộ - Tầng 3 SHCD: Hồ bơi, skygarden, căn hộ</li>
+        </ul>
+        <div class="button-container">
+          <a href="#" class="btn">XEM CHI TIẾT FPT PLAZA 3</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="titlexemchitiet">
+    <h2>XEM CHI TIẾT MỘT SỐ SẢN PHẨM CỦA FPT PLAZA</h2>
+    <img id="logofptchitiet" src="Images/logoFPTchitiet.png" alt="">
+  </div>
+  
+  <div class="containerCanhochitiet">
+    <div class="background-imgaecanhofpt"></div>
+    <div class="overlayCanhochitiet"></div>
+    
+    <div class="itemCanho">
+      <div class="image-Canhochitiet">
+        <img src="./Images/canhoplaza1.jpg" alt="">
+      </div>
+      <div class="info-Canhochitiet">
+        <h2>TOÀ CĂN HỘ CHUNG CƯ FPT PLAZA 1</h2>
+        <div class="button-chitiet">
+          <a href="#" class="btnchitiet">XEM CHI TIẾT FPT PLAZA 1</a>
+        </div>
+      </div>
+    </div>
+    <div class="itemCanho">
+      <div class="image-Canhochitiet">
+        <img src="./Images/canhoplaza1.jpg" alt="">
+      </div>
+      <div class="info-Canhochitiet">
+        <h2>TOÀ CĂN HỘ CHUNG CƯ FPT PLAZA 2</h2>
+        <div class="button-chitiet">
+          <a href="#" class="btnchitiet">XEM CHI TIẾT FPT PLAZA 2</a>
+        </div>
+      </div>
+    </div>
+    <div class="itemCanho">
+      <div class="image-Canhochitiet">
+        <img src="./Images/canhoplaza1.jpg" alt="">
+      </div>
+      <div class="info-Canhochitiet">
+        <h2>TOÀ CĂN HỘ CHUNG CƯ FPT PLAZA 3</h2>
+        <div class="button-chitiet">
+          <a href="#" class="btnchitiet">XEM CHI TIẾT FPT PLAZA 3</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container2">
+    <div class="background-image2"></div>
+    <div class="overlay2"></div>
+    <div class="info-container2">
+      <h1>VỊ TRÍ <span>FPT PLAZA 3</span> ĐÀ NẴNG</h1>
+      <p>Từ bất kỳ vị trí nào trong <span>FPT Plaza 3</span> Đà Nẵng, cư dân chỉ mất vài phút để tiếp cận các tiện nghi
+        sinh hoạt, làm việc và giải trí trong khu đô thị và các khu vực gần kề. Hạ tầng xã hội hoàn chỉnh và quy hoạch
+        thiết kế nhằm mang lại sự thuận tiện tối đa cho cuộc sống cư dân tại đây.</p>
+    </div>
+    <div class="content2">
+      <div class="info-container3">
+        <p>
+          <span>Căn hộ “FPT Plaza 1 – FPT Plaza 2 – FPT Plaza 3 – FPT Plaza 4”</span> có vị trí đắc địa trên tuyến đường
+          Võ Chí Công, kết nối sân bay Đà Nẵng với biển xanh trong vắt. Ngoài ra, căn hộ còn được bao quanh bởi cảnh
+          quan thiên nhiên tuyệt đẹp và sông Cổ Cò thơ mộng. Khung cảnh thiên nhiên này tạo nên không gian sống trong
+          lành, cung cấp cho cư dân nhiều hoạt động giải trí thú vị bên bờ biển cạnh sông. Nằm giữa hai trung tâm du
+          lịch lớn và dọc theo tuyến du lịch đường sông Cổ Cò từ Đà Nẵng vào Hội An.
+        </p>
+        <p>
+          Liền kề 2 sân Golf đẳng cấp quốc tế và hàng loạt khu nghỉ dưỡng cao cấp ven biển. Kết nối với 4 trục đường
+          chính huyết mạch (như Lê Văn Hiến, Trần Đại Nghĩa, Nam Kỳ Khởi Nghĩa, Võ Chí Công,…). Tiếp giáp 2 trường quốc
+          tế Hoa Kỳ APU (APU) và Trường quốc tế Việt Nam Singapore (SIS) và Làng đại học Đà Nẵng. Gần Bệnh viện Quốc tế
+          và Bênh viện chất lượng cao của thành phố. Cách biển Non Nước và bãi tắm công cộng 800m.
+        </p>
+      </div>
+      <div class="image-container2">
+        <img src="./Images/vitrifptplaza3.png" alt="FPT Plaza 3 Đà Nẵng">
+      </div>
+
+    </div>
+  </div>
+
+    <div class="containerTienichFPT">
+      <div class="backgroundTienich"></div>
+      <div class="overlayTienich"></div>
+      <div class="introduceTienich">
+        <h2>Tiện ích FPT PLAZA 3 ĐÀ NẴNG</h2>
+        <p>Khu đô thị FPT City Đà Nẵng là khu đô thị hiện đại với nhiều cơ sở hạ tầng xã hội hoàn chỉnh bao gồm: Trường học, bệnh viện tài chính, văn phòng, khách sạn, … Từ bất kỳ vị trí nào trong FPT City Đà Nẵng, cư dân chỉ mất vài phút để tiếp cận các tiện nghi sinh hoạt, làm việc và giải trí trong khu đô thị và các khu vực gần kề mang lại sự thuận tiện tối đa cho cuộc sống của các cư dân.</p>
+      </div>
+      <div class="containerItemTienIch">
+        <div class="itemtienich">
+          <div class="imageTienIch">
+            <img src="./Images/tienichgiaoduc.jpg" alt="">
+          </div>
+          <h3>HỆ THỐNG GIÁO DỤC</h3>
+          <p>Cư dân sinh sống tạo FPT Plaza Đà Nẵng có thể an tâm cho tương lai của con trẻ, khi dễ dàng tiếp cận được hệ thống giáo dục liên cấp đạt tiêu chuẩn quốc tế của Tập đoàn FPT.</p>
+        </div>
+        <div class="itemtienich">
+          <div class="imageTienIch">
+            <img src="./Images/tienichGiaiTri.png" alt="">
+          </div>
+          <h3>HỆ THỐNG GIẢI TRÍ</h3>
+          <p>FPT Plaza cách sân bay quốc tế Đà Nẵng và trung tâm thành phố 10 phút, 15 phút đến Phố cổ Hội An, gần kề các tiện ích 5 sao như: các resort 5 sao ven biển, sân golf BRG…</p>
+        </div>
+        <div class="itemtienich">
+          <div class="imageTienIch">
+            <img src="./Images/FPTComplex.jpg" alt="">
+          </div>
+          <h3>FPT COMPLEX</h3>
+          <p>FPT Complex là tòa nhà trung tâm phần mềm của FPT, đáp ứng nơi làm việc cho 10.000 cán bộ nhân viên của tập đoàn FPT. Tòa nhà được xây dựng với tổng diện tích 5.9ha, cao 06 tầng.</p>
+        </div>
+        <div class="itemtienich">
+          <div class="imageTienIch">
+            <img src="./Images/baibiendep.jpg" alt="">
+          </div>
+          <h3>BÃI BIỂN ĐẸP</h3>
+          <p>Sở hữu vị trí “độc nhất vô nhị”, bên bờ biển được Forber vinh danh là 1 trong 6 bãi biển đẹp nhất hành tinh, sau lưng là dãy núi Ngũ Hành Sơn kỳ vĩ, Sông Cổ Cò hiền hoà đầy thơ mộng.</p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="carousel">
+      <div class="carousel-item">
+        <img src="./Images/baibiendep.jpg" alt="Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="./Images/baibiendep.jpg" alt="Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="./Images/baibiendep.jpg" alt="Image 3">
+      </div>
+      <div class="carousel-item">
+        <img src="./Images/FPTComplex.jpg" alt="Image 4">
+      </div>
+      <div class="carousel-item">
+        <img src="./Images/FPTComplex.jpg" alt="Image 5">
+      </div>
+      <div class="carousel-item">
+        <img src="./Images/FPTComplex.jpg" alt="Image 6">
+      </div>
+      <button class="carousel-prev">&lt;</button>
+      <button class="carousel-next">&gt;</button>
+    </div> -->
+
+      <div class="phoicanhFPT">
+        <div class="backgroundPhoicanh"></div>
+      <div class="overlayPhoicanh"></div>
+      <div class="tieude1"><h2>Hệ THỐNG TIỆN ÍCH NỔI TRỘI TẠI FPT PLAZA3</h2></div>
+  
+      <div class="containerTienichnoiKhuvuc">
+        <div class="itemtienichkhuvuc">
+          <div class="imageTienichkhuvuc">
+            <img src="./Images/sanhcho.png" alt="">
+          </div>
+          <h3>SẢNH CHỜ SANG TRỌNG</h3>
+        </div>
+        <div class="itemtienichkhuvuc">
+          <div class="imageTienichkhuvuc">
+            <img src="./Images/khumuasam.png" alt="">
+          </div>
+          <h3>KHU MUA SẮM ĐẲNG CẤP</h3>
+        </div>
+        <div class="itemtienichkhuvuc">
+          <div class="imageTienichkhuvuc">
+            <img src="./Images/thuviencongdong.png" alt="">
+          </div>
+          <h3>THƯ VIỆN CỘNG ĐỒNG</h3>
+        </div>
+      </div>
+      
+      <div class="containerTienichnoiKhuvuc">
+        <div class="itemtienichkhuvuc">
+          <div class="imageTienichkhuvuc">
+            <img src="./Images/khuvuchoi.png" alt="">
+          </div>
+          <h3>KHU VU CHƠI CHO TRẺ EM</h3>
+        </div>
+        <div class="itemtienichkhuvuc">
+          <div class="imageTienichkhuvuc">
+            <img src="./Images/gymvayoga.jpg" alt="">
+          </div>
+          <h3>PHÒNG TẬP GYM VÀ YOGA</h3>
+        </div>
+        <div class="itemtienichkhuvuc">
+          <div class="imageTienichkhuvuc">
+            <img src="./Images/beboi.jpg" alt="">
+          </div>
+          <h3>BỂ BƠI HIỆN ĐẠI THOÁNG MÁT</h3>
+        </div>
+      </div>
+      <div class="tieude2"><h2>KHÔNG GIAN SẢNH-THANG MÁY-HỒ BƠI TẠI FPT PLAZA3</h2></div>
+        <div class="containerImage">
+          <div class="itemImage">
+            <img src="./Images/sanhcho.png" alt="Image 1">
+          </div>
+          <div class="itemImage">
+            <img src="./Images/sanhcho.png" alt="Image 2">
+          </div>
+          <div class="itemImage">
+            <img src="./Images/sanhcho.png" alt="Image 3">
+          </div>
+         
+        </div>
+        <button class="carousel-prev">&lt;</button>
+        <button class="carousel-next">&gt;</button>
+      </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js"></script>
+  <script src="panolens.min.js"></script>
+  <script src="JS/panolens.js"></script>
+ 
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+.tour{
+  background: rgba(239, 242, 244, 0.606);
+    height: 780px;
+  display: flex; 
+
+    margin-top: 30px;
+}
+
+.tour_head{ 
+    display: flex; /* Bật Flexbox */
+    flex-direction: column; /* Sắp xếp theo cột */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa văn bản */
+}
+.tour_head h2{
+    padding-top: 20px;
+    margin-bottom: 20px;
+    color: #eb4903;
+}
+.tour_head p{
+    margin: 0px 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 500;
+    color: #074fa1;
+}
+.tour_head span {
+    color: #d46a00;
+    font-weight: 600;
+}
+.image-container {
+    margin: auto;
+    max-width: 100%;
+      width: 1080px;
+      height: 27rem;
+      overflow: hidden;
+      border: 2px solid #022147;
+
+}
+.panolens-container {
+    width: 100%;
+    height: 100%;
+  }
+  .image-container img {
+    width: 100%;
+      height: auto;
+      display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .tour_head p {
+      margin: 0 20px; /* Giảm margin trên màn hình nhỏ */
+      font-size: 18px; /* Giảm kích thước font */
+    }
+  
+    .image-container {
+      width: 90%; /* Chiếm 90% chiều rộng trên màn hình nhỏ */
+      height: auto; /* Chiều cao tự động */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .tour_head h2 {
+      font-size: 24px; /* Giảm kích thước font cho tiêu đề */
+    }
+  
+    .tour_head p {
+      font-size: 16px; /* Giảm kích thước font cho nội dung */
+      margin: 0 10px; /* Giảm margin bên */
+    }
+  
+    .image-container {
+      height: 20rem; /* Giảm chiều cao cho màn hình nhỏ */
+    }
+  }

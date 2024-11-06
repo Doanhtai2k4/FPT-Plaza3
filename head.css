@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.2rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:100 ;
+}
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+      background: red;
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+.header::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent,rgb(255, 255, 255, .4),transparent);
+    transition: left 0.5s ease; /* Hiệu ứng chuyển tiếp cho vị trí */
+}
+.header:hover::after{
+    left: 100%;
+}
+.navbar {
+    margin-left: -40px;
+}
+.navbar a{
+    font-size: 1.4rem;
+}
+.taibanggia{
+    background:#e0d2b9;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    padding: 3px 10px;
+    text-decoration: none; /* Bỏ gạch dưới */
+    border: 2px solid #4c3018;
+    border-radius: 7px;
+    color: rgb(105, 0, 0);
+    font-weight: 500;
+    box-shadow: 0 1px 5px rgba(95, 51, 21, 0.2);
+    transition: transform 0.2s, color 0.2s; /* Thêm chuyển động cho hiệu ứng */
+}
+.taibanggia:hover {
+    transform: scale(1.1); /* Phóng to lên 10% */
+    background: #007b5e;
+    color: #fff;
+}
+.phone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-right: 30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border: 2px solid #248706;
+    border-radius: 50px;
+    background-color: #fcf226;
+    color: rgb(195, 0, 0);
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 1px 10px rgba(2, 64, 28, 0.2);
+}
+
+.phone:hover {
+    transform: scale(1.25); /* Slight zoom on hover */
+    background: rgb(1, 69, 1);
+    color: #fff;
+}
+
+.phone i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+/* Continuous scaling effect */
+@keyframes scaleEffect {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Seesaw tilting effect (left-right tilt) */
+@keyframes tiltEffect {
+    0%, 100% {
+        transform: rotate(0deg); /* Initial position */
+    }
+    25% {
+        transform: rotate(8deg); /* Tilt right side down */
+    }
+    50% {
+        transform: rotate(0deg); /* Back to center */
+    }
+    75% {
+        transform: rotate(-8deg); /* Tilt left side down */
+    }
+}
+
+/* Combining both scale and diagonal seesaw tilt effects */
+.phone {
+    animation: scaleEffect 2s infinite ease-in-out, tiltEffect 1s infinite ease-in-out;
+}
+
+
+.gioithieudki {
+    
+    margin-left: 20px;
+      text-align: center;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    
+}
+.gioithieudki h3{
+    color: #fffbd5;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(40, 39, 38, 0.8); /* Đổ bóng với màu đen, độ mờ 50% */
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* Style chung cho nút đăng ký */
+#offer-button {
+    background-color: #fdb913; /* Màu nền */
+    color: #4a2c08; /* Màu chữ */
+    border: none;
+    padding: 10px  20px;
+   
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    animation: shake-and-scale 3s infinite ease-in-out; /* Thêm hiệu ứng lắc lư và phóng to */
+}
+
+
+/* Hiệu ứng lắc lư và phóng to liên tục */
+@keyframes shake-and-scale {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    10% {
+        transform: translate(-5px, -5px) scale(1.05); /* Di chuyển lên trái và phóng to */
+    }
+    20% {
+        transform: translate(5px, 5px) scale(1.05); /* Di chuyển xuống phải và phóng to */
+    }
+    30% {
+        transform: translate(-5px, 5px) scale(1.05); /* Di chuyển xuống trái và phóng to */
+    }
+    40% {
+        transform: translate(5px, -5px) scale(1.05); /* Di chuyển lên phải và phóng to */
+    }
+    50% {
+        transform: translate(0, 0) scale(1.1); /* Phóng to ở vị trí ban đầu */
+    }
+    60% {
+        transform: translate(-5px, -5px) scale(1.05);
+    }
+    70% {
+        transform: translate(5px, 5px) scale(1.05);
+    }
+    80% {
+        transform: translate(-5px, 5px) scale(1.05);
+    }
+    90% {
+        transform: translate(5px, -5px) scale(1.05);
+    }
+}
+.logo {
+    display: flex; /* Sử dụng flexbox để căn chỉnh logo */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    margin-left: 50px;
+    
+}
+.logo #logofpt{
+    width: 20vw; /* Chiều rộng sẽ chiếm 20% chiều rộng của cửa sổ */
+    max-width: 110px; /* Giới hạn chiều rộng tối đa */
+    height: auto; /* Chiều cao tự động để giữ tỉ lệ */
+    margin-top: -20px; /* Có thể điều chỉnh lại nếu cần */
+    padding-left: 10px;
+    margin-right: 20px; /* Điều chỉnh lại nếu cần */
+}
+.project-image {
+    width: 100%; /* Đặt chiều rộng của div bằng 100% */
+    height: auto; /* Chiều cao tự động để giữ tỷ lệ */
+    overflow: hidden; /* Ẩn bất kỳ phần nào bị tràn */
+}
+
+.project-image img {
+    width: 100%; /* Đặt chiều rộng hình ảnh bằng 100% của div */
+    height: auto; /* Giữ tỷ lệ hình ảnh */
+    display: block; /* Ngăn cách khoảng trắng dưới hình ảnh */
+}
+.project-image {
+    max-width: 100%;
+}
+.navbar a{
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    position: relative; /* Để sử dụng cho hiệu ứng gạch chân */
+    transition: font-size 0.3s, color 0.3s; /* Hiệu ứng chuyển tiếp cho màu chữ */
+   
+}
+.navbar a:hover {
+    font-size: 1.4rem; /* Tăng kích thước chữ lên 1 xíu */
+    color: #f9fbe9;
+    border-bottom:3px solid rgb(0, 229, 255); 
+}
+#check {
+    display: none;
+
+}
+.iconmenu {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+/* //css video bia*/
+.project-image video {
+    max-width: 100%; /* Để video không vượt quá chiều rộng của container */
+    height: auto; /* Giữ tỷ lệ video */
+}
+
+.registration-modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .green-text {
+    color: #007b5e; /* Màu xanh lá cây */
+  }
+
+  
+  #logoformfpt {
+    width: 200px;
+    display: block; /* Để áp dụng margin auto */
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+    height: auto;
+  }
+  .registration-modal-content h2{
+    text-align: center;
+    color: #fa6b04;
+  }
+  @keyframes scaleAnimation {
+    0% {
+        transform: scale(1); /* Bắt đầu ở kích thước bình thường */
+    }
+    50% {
+        transform: scale(1.05); /* Phóng to lên 5% */
+    }
+    100% {
+        transform: scale(1); /* Trở về kích thước ban đầu */
+    }
+}
+  .registration-modal-content {
+    background-color: #fefefe;
+    margin: 12% auto;
+    padding: 20px;
+    border: 2px solid #514d4d;
+    width: 28%;
+    animation: scaleAnimation 2s infinite; /* Thêm hiệu ứng phóng to thu nhỏ */
+  }
+  /* Dừng animation khi hover */
+.registration-modal-content:hover {
+    animation: none; /* Dừng animation khi hover */
+    transform: scale(1); /* Giữ kích thước bình thường khi hover */
+}
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .registration-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+  }
+  
+  .time-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .time-slots label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 30px;
+    font-size: 18px;
+  }
+  
+  .submit-button {
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+
+/* reponsive menu */
+@media (max-width: 992px){
+    .header {
+        padding: 1.3rem 5%;
+    }
+    .navbar a{
+        font-size: 1.4rem;
+        margin-top: 20px;
+    }
+    .logo #logofpt{
+        width: 80px; /* Chiều rộng của logo khi màn hình nhỏ hơn 992px */
+        height: auto; /* Giữ tỉ lệ cho logo */
+        margin-left: 10px;
+    }
+    .gioithieudki h3{
+        font-size: 1.2rem;
+        margin-right: 10px;
+    }
+    #offer-button {
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    
+    .phone {
+        margin-left: 10px;
+        padding-left: 10px;
+        border-radius: 30px;
+        font-size: 1rem;
+       
+    }
+    .phone i {
+        margin-right: 10px;
+        font-size: 1.1rem;
+    }
+    .gioithieudki {
+        margin-left: 10px;
+       
+    }
+    .gioithieudki h3{
+        font-size: 1rem;
+    }
+    #offer-button {
+        font-size: 15px;
+    }
+
+}
+@media (max-width:768px){
+    .iconmenu {
+        display: inline-flex;
+    }
+    #check:checked~.iconmenu #menu-icon {
+        display: none;
+    }
+    .iconmenu #close-icon{
+        display: none;
+    }
+    #check:checked~.iconmenu #close-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 30%; /* Chiếm 30% chiều rộng màn hình */
+        height: 0;
+        background: #fdfdfd;
+        
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .4s ease;
+        text-align: right; /* Canh chữ sang phải */
+        padding-left: 20px;
+    }
+    .navbar a{
+        color: black;
+        font-weight: 400;
+        text-decoration: none; /* Bỏ gạch chân mặc định */
+        border-bottom: 1px solid #b0b0b0; /* Tạo viền ngang dưới thẻ a với màu nhạt */
+        padding: 3px; /* Không thêm khoảng cách bên trên và dưới */
+        display: inline; /* Để viền chỉ vừa với chữ */
+        margin-bottom: 5px; /* Khoảng cách giữa các liên kết */
+        transition: border-color 0.3s; /* Hiệu ứng chuyển màu viền */
+    }
+    .navbar a:hover {
+        border-color: #f7b2b2; /* Đổi màu viền khi hover (tuỳ chọn) */
+    }
+    #check:checked~.navbar { 
+         height: 17.7rem;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transform: .4s ease;
+    }
+    #check:checked~.navbar a{ 
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+   }
+   .logo #logofpt{
+    width: 70px; /* Chiều rộng của logo khi màn hình nhỏ hơn 992px */
+    height: auto; /* Giữ tỉ lệ cho logo */
+    margin-left: 10px;
+    }
+    .gioithieudki h3{
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+    #offer-button {
+        font-size: 13px;
+        margin-right: 10px;
+    }
+    .phone {
+       display: none;
+       
+    }
+    
+    .gioithieudki {
+       margin-right: 20px;
+       padding-right: 20px;
+       
+    }
+    .gioithieudki h3{
+        font-size: 0.8rem;
+    }
+    #offer-button {
+        font-size: 14px;
+    }
+    
+}
