@@ -1,5 +1,5 @@
 
-});
+
 // const voucherTexts = ['Chỉ từ 1,9 TỶ/CĂN', 'Nhanh Tay Nào !'];
 // const voucherColors = {
 //     'Chỉ từ 1,9 TỶ/CĂN': '#CCFFFF',  // Màu vàng cho câu "1 chỉ vàng"
