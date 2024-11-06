@@ -1,42 +1,13 @@
-// JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-  // Kiểm tra cookies
-  var chatData = getChatDataFromCookies();
+  // Kiểm tra xem Fchat có khả dụng không
+  if (typeof fchat !== 'undefined') {
+      // Khởi tạo Fchat
+      fchat.init({
+          // Tùy chọn cấu hình cho Fchat nếu cần
+      });
 
-  // Nếu có dữ liệu chat từ cookies, hiển thị lại Fchat
-  if (chatData) {
-    displayFchat(chatData);
-  } else {
-    // Nếu không có dữ liệu, bắt đầu một cuộc chat mới
-    initFchat();
-  }
-
-  // Hàm lưu dữ liệu chat vào cookies
-  function saveChatDataToCookies(data) {
-    Cookies.set('chatData', JSON.stringify(data));
-  }
-
-  // Hàm lấy dữ liệu chat từ cookies
-  function getChatDataFromCookies() {
-    var cookieData = Cookies.get('chatData');
-    return cookieData ? JSON.parse(cookieData) : null;
-  }
-
-  // Hàm hiển thị Fchat
-  function displayFchat(data) {
-    // Sử dụng API hoặc cách tích hợp Fchat của bạn để hiển thị lại cuộc chat
-    // Ví dụ:
-    var fchatContainer = document.getElementById('fchat-container');
-    fchatContainer.innerHTML = generateFchatHTML(data);
-  }
-
-  // Hàm khởi tạo Fchat mới
-  function initFchat() {
-    // Sử dụng API hoặc cách tích hợp Fchat của bạn để bắt đầu một cuộc chat mới
-    // Và lưu dữ liệu vào cookies
-    var newChatData = { /* dữ liệu chat mới */ };
-    saveChatDataToCookies(newChatData);
-    displayFchat(newChatData);
+      // Hiển thị widget Fchat
+      fchat.show();
   }
 });
 var modal = document.getElementById("registration-modal");
