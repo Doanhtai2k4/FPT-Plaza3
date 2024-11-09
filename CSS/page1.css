@@ -551,6 +551,10 @@
   height: 100%;           /* Chiếm 100% chiều cao của image-Canhochitiet */
   max-height: 100%;
   object-fit: cover;      /* Đảm bảo ảnh không bị méo */
+  transition: transform 0.3s ease;
+}
+.imageTienIch:hover img{
+  transform: scale(1.1);
 }
 .itemtienich h3{
   color: rgba(30, 224, 211, 0.846);
@@ -606,8 +610,8 @@
 .tieude2 {
   color: #f98e02;
   z-index: 2;
-  text-align: center;
   margin-top: 40px;
+  text-align: center;
   font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.2rem;
 }
@@ -626,7 +630,6 @@
   width: 29%;
   height: 98%;
   margin: 0 30px;
-  background-color: #074946;
 }
 .imageTienichkhuvuc {
   width: 100%;            /* Chiếm 100% chiều rộng của itemCanho */
@@ -640,31 +643,14 @@
   height: 100%;           /* Chiếm 100% chiều cao của image-Canhochitiet */
   max-height: 100%;
   object-fit: cover;      /* Đảm bảo ảnh không bị méo */
+  transition: transform 0.3s ease;
+}
+.imageTienichkhuvuc:hover img {
+  transform: scale(1.1);
 }
 .itemtienichkhuvuc h3 {
   margin: auto;
   color: #ffffff;
   font-family: 'Times New Roman', Times, serif;
 }
-.containerImage {
-  display: flex;
-  width: 82%;
-  margin: auto;
-  height: 20%;
-  background-color: #333;
-  z-index: 2;
-}
 
-.itemImage {
-  width: 30%; /* Mỗi hình ảnh chiếm 30% chiều rộng */
-  height: 98%;
-  color: #9fe8ea;
-  margin: 0 20px;
-  
- 
-}
-.itemImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}

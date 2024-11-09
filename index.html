@@ -12,11 +12,15 @@
   <link rel="stylesheet" href="head.css">
   <link rel="stylesheet" href="CSS/page1.css">
   <link rel="stylesheet" href="panorama.css">
+  <link rel="stylesheet" href="./CSS/chuyenanh.css">
+  <link rel="stylesheet" href="./CSS/thietke3D.css">
   <script src="script.js" defer></script>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="./CSS/itemChitietcanho.css">
   </script>
-  
+  <link rel="stylesheet" href="./Libs/magnific-popup.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./Libs/jquery.magnific-popup.min.js"></script>
 </head>
 <!-- HTML -->
 <div id="fchat-container"></div>
@@ -183,7 +187,7 @@
     </div>
     <div class="itemCanho">
       <div class="image-Canhochitiet">
-        <img src="./Images/canhoplaza1.jpg" alt="">
+        <img src="./Images/canhoplaza2.jpg" alt="">
       </div>
       <div class="info-Canhochitiet">
         <h2>TOÀ CĂN HỘ CHUNG CƯ FPT PLAZA 2</h2>
@@ -194,7 +198,7 @@
     </div>
     <div class="itemCanho">
       <div class="image-Canhochitiet">
-        <img src="./Images/canhoplaza1.jpg" alt="">
+        <img src="./Images/canhoplaza3.jpeg" alt="">
       </div>
       <div class="info-Canhochitiet">
         <h2>TOÀ CĂN HỘ CHUNG CƯ FPT PLAZA 3</h2>
@@ -345,25 +349,71 @@
         </div>
       </div>
       <div class="tieude2"><h2>KHÔNG GIAN SẢNH-THANG MÁY-HỒ BƠI TẠI FPT PLAZA3</h2></div>
-        <div class="containerImage">
+      <div class="containerImage">
+        <div class="images">
           <div class="itemImage">
-            <img src="./Images/sanhcho.png" alt="Image 1">
+            <a href="./Images/baibiendep.jpg" class="image-link">
+              <img src="./Images/baibiendep.jpg" alt="Image 1">
+            </a>
           </div>
           <div class="itemImage">
-            <img src="./Images/sanhcho.png" alt="Image 2">
+            <a href="./Images/beboi.jpg" class="image-link">
+              <img src="./Images/beboi.jpg" alt="Image 2">
+            </a>
           </div>
           <div class="itemImage">
-            <img src="./Images/sanhcho.png" alt="Image 3">
+            <a href="./Images/gymvayoga.jpg" class="image-link">
+              <img src="./Images/gymvayoga.jpg" alt="Image 3">
+            </a>
           </div>
-         
         </div>
-        <button class="carousel-prev">&lt;</button>
-        <button class="carousel-next">&gt;</button>
+        <div class="btns">
+          <div class="btn-left buttonchuyenanh"><i class='bx bx-chevron-left'></i></div>
+          <div class="btn-right buttonchuyenanh "><i class='bx bx-chevron-right'></i></div>
+        </div>
+      </div>
+        
+    </div>
+      </div>
+      <div class="banthietke3D">
+        <div class="tieudethietke3d">
+          <h2>THIẾT KẾ 3D CĂN HỘ FPT PLAZA 3</h2>
+        </div>
+        <div class="containerThietke3D">
+            <ul class="ulThietke3D">
+              <li class="liThietke3D" activethietke>Căn 1 PN</li>
+              <li class="liThietke3D">Căn 1+1 PN</li>
+              <li class="liThietke3D">Căn 2+1 PN</li>
+              <li class="liThietke3D"><i class='bx bxs-star'></i> 2 PN H-T.Bắc</li>
+              <li class="liThietke3D"><i class='bx bxs-star'></i> 2 PN H-T.Nam</li>
+              <li class="liThietke3D"><i class='bx bxs-star'></i> 2 PN H-Đ.Nam</li>
+              <li class="liThietke3D"><i class='bx bxs-star'></i> 2 PN H-Đ.Bắc</li>
+              <li class="liThietke3D">Căn 3 PN</li>
+              <li class="liThietke3D">Căn 3+1 PN: 123m2</li>
+              <li class="liThietke3D">Căn Duplex</li>
+            </ul>
+        </div>
+       <div class="showThietke3D">
+          <div class="ItemImageThietke3D">
+             <a class="popup-image" href="./Images/./ImageThietKe3D/layout-can-1pn-fpt-plaza.jpg">
+                <img src="./Images/./ImageThietKe3D/layout-can-1pn-fpt-plaza.jpg" alt="">
+              </a>
+          </div>
+       </div>
+       <div class="ContainerItemImageMin"> 
+          <!-- Các phần tử itemImageMin sẽ được tạo động bằng JavaScript -->
+        <div class="button">
+          <div class="bleft buttonchuyenanhthietke"><i class='bx bx-chevron-left'></i></div>
+          <div class="bright buttonchuyenanhthietke "><i class='bx bx-chevron-right'></i></div>
+        </div>
+       </div>
       </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js"></script>
   <script src="panolens.min.js"></script>
   <script src="JS/panolens.js"></script>
- 
+      <script src="./JS/chuyenanh.js"></script>
+      <script src="./JS/thietke3D.js"></script>
+      
 </body>
 
 </html>
